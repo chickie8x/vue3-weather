@@ -5,6 +5,7 @@ export const weather = defineStore('weatherState', {
         cities: [],
         seltectedCity:null,
         weather: {},
+        inputVal:''
     }),
 
     getters: {
@@ -21,6 +22,9 @@ export const weather = defineStore('weatherState', {
         
         setselectedCity(city){
             this.seltectedCity = city
+        },
+        setInputVal(val){
+            this.inputVal=val
         }
     }
 })

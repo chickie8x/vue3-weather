@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import SearchIcon from "./icons/SearchIcon.vue";
 import axios from 'axios';
 import { weather } from "../stores/weather";
@@ -25,15 +25,16 @@ export default {
   },
 
   setup() {
-    const value = ref("");
     const iconColor = ref("blue");
     const weatherInfo = weather()
+    const value = computed(() => weatherInfo.inputVal)
 
     const API_KEY = import.meta.env.VITE_API_KEY
     const CITIES_URL = import.meta.env.VITE_GET_CITIES
 
-    const searchCity = async () =>{
-      const cities = await axios.get(CITIES_URL+API_KEY+`&q=${value.value}`)
+    const searchCity = async (e) =>{
+      weatherInfo.setInputVal(e.target.value)
+      const cities = await axios.get(CITIES_URL+API_KEY+`&q=${e.target.value}`)
       if(cities.data.length){
         weatherInfo.setCities(await cities.data)
       }
