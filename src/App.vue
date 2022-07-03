@@ -9,8 +9,7 @@
 
 <script>
 import SearchBar from "./components/SearchBar.vue";
-import ListCity from "./components/ListCity.vue"
-
+import ListCity from "./components/ListCity.vue";
 
 export default {
   components: {

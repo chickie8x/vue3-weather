@@ -22,10 +22,10 @@ export default {
   name: "SearchIcon",
   props: {
     color: {
-        type: String,
-        require: true,
-        default: () => "white"
-    }
+      type: String,
+      require: true,
+      default: () => "white",
+    },
   },
 };
 </script>

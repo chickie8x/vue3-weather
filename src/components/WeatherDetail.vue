@@ -1,13 +1,11 @@
 <template>
-  
+  <div>weather detail component</div>
 </template>
 
 <script>
 export default {
-    name: 'WeatherDetail',
+  name: "WeatherDetail",
 
-    setup(){
-        
-    }
-}
+  setup() {},
+};
 </script>
