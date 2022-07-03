@@ -16,6 +16,7 @@ import { computed, ref } from "vue";
 import SearchIcon from "./icons/SearchIcon.vue";
 import axios from 'axios';
 import { weather } from "../stores/weather";
+import { set } from "vue-demi";
 
 export default {
   name: "SearchBar",
@@ -27,7 +28,15 @@ export default {
   setup() {
     const iconColor = ref("blue");
     const weatherInfo = weather()
-    const value = computed(() => weatherInfo.inputVal)
+    const value = computed({
+      get(){
+        return weatherInfo.inputVal
+      },
+      set(val){
+        weatherInfo.inputVal=val
+      }
+      
+      })
 
     const API_KEY = import.meta.env.VITE_API_KEY
     const CITIES_URL = import.meta.env.VITE_GET_CITIES
