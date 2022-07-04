@@ -4,7 +4,7 @@ export const weather = defineStore("weatherState", {
   state: () => ({
     cities: [],
     seltectedCity: null,
-    weather: {},
+    weather: null,
     inputVal: "",
   }),
 
