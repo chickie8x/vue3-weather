@@ -6,6 +6,7 @@
         <ListCity />
       </div>
       <WeatherDetail />
+      <Astronomy />
     </div>
   </div>
 </template>
@@ -14,12 +15,14 @@
 import SearchBar from "./components/SearchBar.vue";
 import ListCity from "./components/ListCity.vue";
 import WeatherDetail from "./components/WeatherDetail.vue";
+import Astronomy from "./components/Astronomy.vue";
 
 export default {
   components: {
     SearchBar,
     ListCity,
     WeatherDetail,
-  },
+    Astronomy
+},
 };
 </script>

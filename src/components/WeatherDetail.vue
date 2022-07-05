@@ -31,7 +31,7 @@
         class="flex flex-col text-white text-sm justify-center mb-3 text-center"
       >
         <span class="text-sm font-bold">Pressure</span>
-        {{ weatherInfo.weather.current.pressure_mb }}
+        {{ weatherInfo.weather.current.pressure_mb }} mba
       </div>
       <div
         class="flex flex-col text-white text-sm justify-center mb-3 text-center"
