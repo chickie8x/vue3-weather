@@ -5,8 +5,11 @@
         <SearchBar class="mt-2" />
         <ListCity />
       </div>
-      <WeatherDetail />
-      <Astronomy />
+      <div v-if="weatherInfo.weather" >
+        <WeatherDetail />
+        <Astronomy />
+      </div>
+      <div v-else></div>
     </div>
   </div>
 </template>
@@ -16,13 +19,22 @@ import SearchBar from "./components/SearchBar.vue";
 import ListCity from "./components/ListCity.vue";
 import WeatherDetail from "./components/WeatherDetail.vue";
 import Astronomy from "./components/Astronomy.vue";
+import { weather } from "./stores/weather";
 
 export default {
   components: {
     SearchBar,
     ListCity,
     WeatherDetail,
-    Astronomy
-},
+    Astronomy,
+  },
+
+  setup(){
+    const weatherInfo = weather()
+
+    return {
+      weatherInfo,
+    }
+  }
 };
 </script>

@@ -8,7 +8,8 @@
       />
       {{ weatherInfo.weather.location.name }}
     </div>
-    <div class="text-white text-8xl mt-2 flex justify-center items-start">
+    <div class=" text-center text-white text-sm">{{ weatherInfo.weather.location.localtime }}</div>
+    <div class="text-white text-8xl mt-4 flex justify-center items-start">
       <span class="block relative"
         >{{ weatherInfo.weather.current.temp_c }}
         <span class="text-2xl absolute top-2 right-[-2]">°C</span>
