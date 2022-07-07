@@ -1,7 +1,7 @@
 <template>
   <div class="px-5 mt-3">
     <div class="flex justify-center">
-      <SunPath :hour="currentHour" />
+      <SunPath />
     </div>
     <div class="flex justify-between text-white text-sm mt-2">
       <span>Sunrise {{ weatherInfo.weather.forecast.forecastday[0].astro.sunrise }}</span>
@@ -22,11 +22,8 @@ export default {
 
   setup() {
     const weatherInfo = weather();
-    const currentHour =  weatherInfo.weather.location.localtime.split(" ")[1].split(":")[0]
-    console.log(currentHour)
     return {
       weatherInfo,
-      currentHour
     };
   },
 };
