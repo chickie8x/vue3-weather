@@ -1,5 +1,5 @@
 <template>
-  <div class="px-5 mt-3">
+  <div class="px-5">
     <div class="flex justify-center">
       <SunPath />
     </div>
